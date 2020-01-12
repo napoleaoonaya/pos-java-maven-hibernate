@@ -122,4 +122,20 @@ public class TesteHibernate {
 		
 	}
 	
+	@Test//Busca com parâmetro
+	public void testeQueryListParameter() {
+		
+		DaoGeneric<UsuarioPessoa> daoGeneric = new DaoGeneric<UsuarioPessoa>();
+		List<UsuarioPessoa> lista = daoGeneric.getEntityManager()
+				.createQuery("from UsuarioPessoa p where p.nome = :nome and p.sobrenome = :sobrenome")
+				.setParameter("nome", "atila")
+				.setParameter("sobrenome", "onaya")
+				.getResultList();
+		
+		for (UsuarioPessoa usuarioPessoa : lista) {
+			System.out.println(usuarioPessoa);
+		}
+		
+	}
+	
 }
