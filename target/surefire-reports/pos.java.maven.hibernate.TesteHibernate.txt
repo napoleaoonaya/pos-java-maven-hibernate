@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pos.java.maven.hibernate.TesteHibernate
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.974 sec
